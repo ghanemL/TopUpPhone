@@ -4,6 +4,8 @@ using MobileTopup.Application.Common.Interfaces.Persistance;
 using MobileTopup.Domain.UserAggregate;
 using MobileTopup.Domain.Common.Errors;
 using MobileTopUp.Web.ExternalHttpClient;
+using MobileTopup.Application.Common.Interfaces.Services;
+using MobileTopup.Domain.UserAggregate.Entities;
 
 namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
 {
@@ -11,11 +13,20 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
     {
         private readonly IUserRepository _userRepository;
         private readonly IHttpClientService _balanceHttpService;
+        private readonly IDateTimeProvider _dateTimeProvider;
 
-        public ExecuteTopUpCommandHandler(IUserRepository userRepository, IHttpClientService balanceHttpService)
+        private const int MaximumTopUpExceedVerified = 500;
+        private const int MaximumTopUpExceedUnverified = 100;
+        private const int MonthlyCapacityLimit = 3000;
+
+
+        public ExecuteTopUpCommandHandler(IUserRepository userRepository, 
+            IHttpClientService balanceHttpService,
+            IDateTimeProvider dateTimeProvider)
         {
             _userRepository = userRepository;
             _balanceHttpService = balanceHttpService;
+            _dateTimeProvider = dateTimeProvider;
         }
 
         public async Task<ErrorOr<User>> Handle(ExecuteTopUpCommand request, CancellationToken cancellationToken)
@@ -27,38 +38,40 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
                 return Errors.User.UserNotFound;
             }
 
-            long totalTopUpAmount = request.Beneficiaries.Sum(b => b.TopUpOption + 1);
-
             var balance = RetrieveBalance(user.Id, cancellationToken).Result.Value;
 
-            if (balance < totalTopUpAmount || balance < 3000)
+            var errors = CheckMonthlyBeneficiaryCapacity(request, user);
+
+            if (errors.Any())
+            {
+                return errors.First();
+            }
+
+            long totalTopUpAmount = request.Beneficiaries.Sum(b => b.TopUpOption + 1);
+
+            var remainingMonthlyCapacity = MonthlyCapacityLimit - user.Beneficiaries?.Sum(b => GetUserBeneficiaryCurrentTopup(b));
+
+            if (balance < totalTopUpAmount || remainingMonthlyCapacity < totalTopUpAmount)
             {
                 return Errors.ExecuteTopUp.InsufficientBalance;
             }
 
             await Debit(user.Id, totalTopUpAmount, cancellationToken);
 
-            request.Beneficiaries.ForEach(beneficiary => {
-                var currentBeneficiary = user?.Beneficiaries?.SingleOrDefault(b => b.Id == beneficiary.BeneficiaryId);
-                user.AddTransaction(currentBeneficiary, beneficiary.TopUpOption + 1);
-            });           
-            
+            ProcessTransaction(request, user);
+
             await _userRepository.SaveAsync(user);
 
             return user;
         }
 
-        public async Task<ErrorOr<long?>> RetrieveBalance(Guid userId, CancellationToken cancellationToken)
+        private async Task<ErrorOr<long?>> RetrieveBalance(Guid userId, CancellationToken cancellationToken)
         {
             var response = await _balanceHttpService.GetBalanceAsync(userId.ToString(), cancellationToken);
-            if (response == null)
-            {
-                return Errors.ExecuteTopUp.BalanceServiceUnavailable;
-            }
-            long balance;
-            long.TryParse(response, out balance);
-            return balance;
+            return long.TryParse(response, out long balance) ? balance : Errors.ExecuteTopUp.BalanceServiceUnavailable;
         }
+
+
 
         public async Task<ErrorOr<bool>> Debit(Guid userId, long amount, CancellationToken cancellationToken)
         {
@@ -69,6 +82,49 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
             }
             
             return response;
+        }
+
+        public List<Error> CheckMonthlyBeneficiaryCapacity(ExecuteTopUpCommand request, User user)
+        {
+            var errors = new List<Error>();
+
+            foreach (var beneficiary in request.Beneficiaries)
+            {
+                var userBeneficiary = user.Beneficiaries.SingleOrDefault(ub => ub.Id == beneficiary.BeneficiaryId);
+
+                if (userBeneficiary != null)
+                {
+                    var userBeneficiaryCurrentTopup = GetUserBeneficiaryCurrentTopup(userBeneficiary);
+
+                    if (userBeneficiaryCurrentTopup + beneficiary.TopUpOption > MaximumTopUpExceedVerified && user.IsVerified)
+                    {
+                        errors.Add(Errors.ExecuteTopUp.MaximumCapacityExceedVerifiedUser);
+                    }
+
+                    if (userBeneficiaryCurrentTopup + beneficiary.TopUpOption > MaximumTopUpExceedUnverified && !user.IsVerified)
+                    {
+                        errors.Add(Errors.ExecuteTopUp.MaximumCapacityExceedUnverifiedUser);
+                    }
+                }
+            }
+
+            return errors;
+        }
+
+        public void ProcessTransaction(ExecuteTopUpCommand request, User user)
+        {
+            request.Beneficiaries.ForEach(beneficiary =>
+            {
+                var currentBeneficiary = user?.Beneficiaries?.SingleOrDefault(b => b.Id == beneficiary.BeneficiaryId);
+                user?.AddTransaction(currentBeneficiary, beneficiary.TopUpOption + 1);
+            });
+        }
+
+        private decimal GetUserBeneficiaryCurrentTopup(TopUpBeneficiary userBeneficiary)
+        {
+            return userBeneficiary.Transactions
+                ?.Where(t => _dateTimeProvider.IsInCurrentMonth(t.TransactionDate))
+                .Sum(t => t?.Amount) ?? 0;
         }
     }
 }

@@ -531,3 +531,4 @@ C:\Workspace\TopUpPhone\MobileTopup.Tests\bin\Debug\net6.0\Swashbuckle.AspNetCor
 C:\Workspace\TopUpPhone\MobileTopup.Tests\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Workspace\TopUpPhone\MobileTopup.Tests\bin\Debug\net6.0\MobileTopup.Api.dll
 C:\Workspace\TopUpPhone\MobileTopup.Tests\bin\Debug\net6.0\MobileTopup.Api.pdb
+C:\Workspace\TopUpPhone\MobileTopup.Tests\bin\Debug\net6.0\NSubstitute.dll

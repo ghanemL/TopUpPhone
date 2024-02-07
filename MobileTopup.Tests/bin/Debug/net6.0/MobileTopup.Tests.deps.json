@@ -47,6 +47,7 @@
           "Microsoft.NET.Test.Sdk": "17.3.2",
           "MobileTopup.Api": "1.0.0",
           "MobileTopup.Infrastructure": "1.0.0",
+          "NSubstitute": "4.2.1",
           "Nito.AsyncEx": "5.1.2",
           "Respawn": "6.0.0",
           "Shouldly": "4.1.0",
@@ -379,7 +380,7 @@
           "lib/netstandard2.0/Azure.Identity.dll": {}
         }
       },
-      "Castle.Core/4.3.1": {
+      "Castle.Core/4.4.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "System.Collections.Specialized": "4.3.0",
@@ -395,7 +396,7 @@
         "runtime": {
           "lib/netstandard1.5/Castle.Core.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.3.1.0"
+            "fileVersion": "4.4.0.0"
           }
         },
         "compile": {
@@ -441,7 +442,7 @@
       },
       "FakeItEasy/7.3.1": {
         "dependencies": {
-          "Castle.Core": "4.3.1"
+          "Castle.Core": "4.4.0"
         },
         "runtime": {
           "lib/net5.0/FakeItEasy.dll": {
@@ -2151,6 +2152,21 @@
         },
         "compile": {
           "lib/netstandard2.1/Nito.Disposables.dll": {}
+        }
+      },
+      "NSubstitute/4.2.1": {
+        "dependencies": {
+          "Castle.Core": "4.4.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSubstitute.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSubstitute.dll": {}
         }
       },
       "NuGet.Frameworks/5.11.0": {
@@ -5082,12 +5098,12 @@
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
     },
-    "Castle.Core/4.3.1": {
+    "Castle.Core/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8Y/eTr6GTElAGV7eAmJuhfLhGdFpNvaNrQ9UQYDScziLmX+/BLGM+9eQr0IcdNDcPN0ADmbtwT6MgecGKy4obw==",
-      "path": "castle.core/4.3.1",
-      "hashPath": "castle.core.4.3.1.nupkg.sha512"
+      "sha512": "sha512-b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
+      "path": "castle.core/4.4.0",
+      "hashPath": "castle.core.4.4.0.nupkg.sha512"
     },
     "DiffEngine/10.0.0": {
       "type": "package",
@@ -6047,6 +6063,13 @@
       "sha512": "sha512-6sZ5uynQeAE9dPWBQGKebNmxbY4xsvcc5VplB5WkYEESUS7oy4AwnFp0FhqxTSKm/PaFrFqLrYr696CYN8cugg==",
       "path": "nito.disposables/2.2.1",
       "hashPath": "nito.disposables.2.2.1.nupkg.sha512"
+    },
+    "NSubstitute/4.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CqQuOU06ftAKrTV7Op/s0hdSII4RP6SNjP/XT1+2oEC6EqwYLXOfek/p+SEuHgaH8WNwEHWIYjsrUV9oSOIOXw==",
+      "path": "nsubstitute/4.2.1",
+      "hashPath": "nsubstitute.4.2.1.nupkg.sha512"
     },
     "NuGet.Frameworks/5.11.0": {
       "type": "package",

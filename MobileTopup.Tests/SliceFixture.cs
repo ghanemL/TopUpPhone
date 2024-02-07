@@ -3,11 +3,18 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MobileTopup.Api;
+using MobileTopup.Api.Misc;
+using MobileTopup.Application.Common.Interfaces.Persistance;
+using MobileTopup.Application.Common.Interfaces.Services;
 using MobileTopup.Domain;
 using MobileTopup.Infrastructure.Persistance;
+using MobileTopup.Infrastructure.Persistance.Repositories;
+using MobileTopup.Tests;
+using MobileTopUp.Web.ExternalHttpClient;
+using NSubstitute;
 using Respawn;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace MobileTopup.IntegrationTests;
 
@@ -16,17 +23,22 @@ public class SliceFixtureCollection : ICollectionFixture<SliceFixture> { }
 
 public class SliceFixture : IAsyncLifetime
 {
+    private readonly ITestOutputHelper _testOutputHelper;
     private Respawner _respawner;
-    //private readonly IConfiguration _configuration;
     private readonly IServiceScopeFactory _scopeFactory;
     private readonly WebApplicationFactory<Program> _factory;
     private readonly string _connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TopUpDB;Integrated Security=False;Connect Timeout=30;MultipleActiveResultSets=true";
 
+
+    public IDateTimeProvider DateTimeProvider { get; } = Substitute.For<IDateTimeProvider>();
+    public IHttpClientService BalanceHttpService { get; } = Substitute.For<IHttpClientService>();
+    public IContextExtensions RelationalQueryableExtensions { get; } = Substitute.For<IContextExtensions>();
+
+    public IUserRepository UserRepository { get; } = Substitute.For<IUserRepository>();
+
     public SliceFixture()
     {
         _factory = new MobileTopUpTestApplicationFactory();
-
-        //_configuration = _factory.Services.GetRequiredService<IConfiguration>();
         _scopeFactory = _factory.Services.GetRequiredService<IServiceScopeFactory>();
 
     }

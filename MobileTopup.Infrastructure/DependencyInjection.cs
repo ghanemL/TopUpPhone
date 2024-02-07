@@ -2,8 +2,10 @@
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using MobileTopup.Application.Common.Interfaces.Persistance;
+using MobileTopup.Application.Common.Interfaces.Services;
 using MobileTopup.Infrastructure.Persistance;
 using MobileTopup.Infrastructure.Persistance.Repositories;
+using MobileTopup.Infrastructure.Services;
 
 namespace MobileTopup.Infrastructure
 {
@@ -33,6 +35,7 @@ namespace MobileTopup.Infrastructure
                 ServiceLifetime.Transient);
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
             return services;
         }

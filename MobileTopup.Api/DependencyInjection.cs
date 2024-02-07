@@ -16,7 +16,6 @@ public static class DependencyInjection
         services.AddFluentValidationAutoValidation();
         services.AddScoped<IValidator<AddTopUpBeneficiaryCommand>, AddTopUpBeneficiaryCommandValidator>();
         services.AddScoped<IValidator<ExecuteTopUpCommand>, ExecuteTopUpCommandValidator>();
-        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddScoped<IContextExtensions, ContextExtensions>();
 
         services.AddSingleton<ProblemDetailsFactory, TopUpProblemDetailsFactory>();

@@ -38,7 +38,7 @@
           "lib/netstandard2.0/Azure.Identity.dll": {}
         }
       },
-      "Castle.Core/4.3.1": {
+      "Castle.Core/4.4.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -2228,6 +2228,19 @@
           "lib/netstandard2.1/Nito.Disposables.dll": {}
         }
       },
+      "NSubstitute/4.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "4.4.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSubstitute.dll": {}
+        }
+      },
       "NuGet.Frameworks/5.11.0": {
         "type": "package",
         "compile": {
@@ -4304,17 +4317,17 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Castle.Core/4.3.1": {
-      "sha512": "8Y/eTr6GTElAGV7eAmJuhfLhGdFpNvaNrQ9UQYDScziLmX+/BLGM+9eQr0IcdNDcPN0ADmbtwT6MgecGKy4obw==",
+    "Castle.Core/4.4.0": {
+      "sha512": "b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
       "type": "package",
-      "path": "castle.core/4.3.1",
+      "path": "castle.core/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ASL - Apache Software Foundation License.txt",
         "CHANGELOG.md",
         "LICENSE",
-        "castle.core.4.3.1.nupkg.sha512",
+        "castle.core.4.4.0.nupkg.sha512",
         "castle.core.nuspec",
         "lib/net35/Castle.Core.dll",
         "lib/net35/Castle.Core.xml",
@@ -7656,6 +7669,25 @@
         "lib/netstandard2.1/Nito.Disposables.xml",
         "nito.disposables.2.2.1.nupkg.sha512",
         "nito.disposables.nuspec"
+      ]
+    },
+    "NSubstitute/4.2.1": {
+      "sha512": "CqQuOU06ftAKrTV7Op/s0hdSII4RP6SNjP/XT1+2oEC6EqwYLXOfek/p+SEuHgaH8WNwEHWIYjsrUV9oSOIOXw==",
+      "type": "package",
+      "path": "nsubstitute/4.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NSubstitute.dll",
+        "lib/net45/NSubstitute.xml",
+        "lib/net46/NSubstitute.dll",
+        "lib/net46/NSubstitute.xml",
+        "lib/netstandard1.3/NSubstitute.dll",
+        "lib/netstandard1.3/NSubstitute.xml",
+        "lib/netstandard2.0/NSubstitute.dll",
+        "lib/netstandard2.0/NSubstitute.xml",
+        "nsubstitute.4.2.1.nupkg.sha512",
+        "nsubstitute.nuspec"
       ]
     },
     "NuGet.Frameworks/5.11.0": {
@@ -12815,6 +12847,7 @@
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "MobileTopup.Api >= 1.0.0",
       "MobileTopup.Infrastructure >= 1.0.0",
+      "NSubstitute >= 4.2.1",
       "Nito.AsyncEx >= 5.1.2",
       "Respawn >= 6.0.0",
       "Shouldly >= 4.1.0",
@@ -12915,6 +12948,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.3.2, )"
+          },
+          "NSubstitute": {
+            "target": "Package",
+            "version": "[4.2.1, )"
           },
           "Nito.AsyncEx": {
             "target": "Package",

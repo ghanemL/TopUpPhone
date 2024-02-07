@@ -504,6 +504,10 @@
               "target": "Package",
               "version": "[17.3.2, )"
             },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
             "Nito.AsyncEx": {
               "target": "Package",
               "version": "[5.1.2, )"

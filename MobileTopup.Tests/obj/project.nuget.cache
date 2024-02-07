@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FYZ5TrBF9vd4a0IJ/mHEmOF+VLM2w4kLPTw0MBvzzwoftxIZIjSdCbUsx5v7fhh9QtRWVOt9Yh6qCRmARUTMxQ==",
+  "dgSpecHash": "4FIKGSy2Kb0EbJM5KGhspDpQ/URnfa1AepcQnN54KwNofV5QpLrq79r34Yp4ue7wHHRvfu2YTBzxIKx0HOOtWw==",
   "success": true,
   "projectFilePath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Tests\\MobileTopup.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZP4125\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
-    "C:\\Users\\ZP4125\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",
+    "C:\\Users\\ZP4125\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\diffengine\\10.0.0\\diffengine.10.0.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\emptyfiles\\2.8.0\\emptyfiles.2.8.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\erroror\\1.0.0\\erroror.1.0.0.nupkg.sha512",
@@ -144,6 +144,7 @@
     "C:\\Users\\ZP4125\\.nuget\\packages\\nito.cancellation\\1.1.2\\nito.cancellation.1.1.2.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\nito.collections.deque\\1.1.1\\nito.collections.deque.1.1.1.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\nito.disposables\\2.2.1\\nito.disposables.2.2.1.nupkg.sha512",
+    "C:\\Users\\ZP4125\\.nuget\\packages\\nsubstitute\\4.2.1\\nsubstitute.4.2.1.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\respawn\\6.0.0\\respawn.6.0.0.nupkg.sha512",

@@ -17,6 +17,10 @@ namespace MobileTopup.Domain.Common.Errors
             public static Error InsufficientBalance => Error.Custom(490, code: "Balance", description: "Insufficient balance or monthly limit exceeded.");
             public static Error BalanceServiceUnavailable => Error.Failure(code: "BalanceHttpService", description: "External Balance Http Service is Unavailable.");
             public static Error DebitFailure => Error.Failure(code: "BalanceHttpService", description: "Fail To process Debit in Balance Service");
+            public static Error MaximumCapacityExceedVerifiedUser => Error.Failure(code: "ExecuteTopUpLimitExceeded", description: "Maximum Monthly Capacity Exceed for Verified User");
+            public static Error MaximumCapacityExceedUnverifiedUser => Error.Failure(code: "ExecuteTopUpLimitExceededUnverfiedUser", description: "Maximum Monthly Capacity Exceed for UNVerified User");
+
+
         }
     }
 }
