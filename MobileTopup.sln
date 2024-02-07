@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTopUp.Web", "MobileTopUp.Web\MobileTopUp.Web.csproj", "{E4CE0D20-4CD7-47DA-91B1-5466309D531A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopUp.Web", "MobileTopUp.Web\MobileTopUp.Web.csproj", "{E4CE0D20-4CD7-47DA-91B1-5466309D531A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTopup.Tests", "MobileTopup.Tests\MobileTopup.Tests.csproj", "{E1069812-6F22-4DCB-B20B-86C8799C1A10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1069812-6F22-4DCB-B20B-86C8799C1A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1069812-6F22-4DCB-B20B-86C8799C1A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1069812-6F22-4DCB-B20B-86C8799C1A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1069812-6F22-4DCB-B20B-86C8799C1A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

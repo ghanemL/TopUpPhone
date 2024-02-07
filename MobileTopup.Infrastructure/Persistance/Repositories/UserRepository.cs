@@ -18,7 +18,7 @@ namespace MobileTopup.Infrastructure.Persistance.Repositories
             return _context.Users
                 .Include(u => u.Beneficiaries)
                 .ThenInclude(u => u.Transactions)
-                .SingleOrDefault(u => u.UserId == userId);
+                .SingleOrDefault(u => u.Id == userId);
         }
         
 
@@ -32,7 +32,7 @@ namespace MobileTopup.Infrastructure.Persistance.Repositories
 
         public async Task SaveAsync(User user)
         {
-            if (user.UserId == Guid.Empty)
+            if (user.Id == Guid.Empty)
             {
                 await _context.Users.AddAsync(user);
             }

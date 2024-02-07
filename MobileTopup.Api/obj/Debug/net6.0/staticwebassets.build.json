@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BlynAegAUHtLyvXKFwHZyLzr6IfWQA9pGjOI1APCsyo=",
+  "Source": "MobileTopup.Api",
+  "BasePath": "_content/MobileTopup.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -3,7 +3,7 @@ namespace MobileTopup.Domain.UserAggregate.Entities
 {
     public class TopUpBeneficiary
     {
-        public Guid BeneficiaryId { get; set; }
+        public Guid Id { get; set; }
         public string? Nickname { get; set; }
         public User? User { get; set; }
         public Guid? UserId { get; set; }
@@ -11,8 +11,8 @@ namespace MobileTopup.Domain.UserAggregate.Entities
 
         public TopUpBeneficiary(Guid guid, User user, string? nickName)
         {
-            BeneficiaryId = guid;
-            UserId = user.UserId;
+            Id = guid;
+            UserId = user.Id;
             User = user;
             Nickname = nickName;
         }      

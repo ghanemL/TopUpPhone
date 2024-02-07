@@ -1,9 +1,9 @@
 ﻿
 namespace MobileTopup.Domain.UserAggregate.Entities
 {
-    public class Transaction
+    public class Transaction : IEntity
     {
-        public Guid TransactionId { get; set; }
+        public Guid Id { get; set; }
         public long Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public TopUpBeneficiary? TopUpBeneficiary { get; set; }
@@ -11,11 +11,11 @@ namespace MobileTopup.Domain.UserAggregate.Entities
 
         public Transaction(Guid guid, TopUpBeneficiary beneficiary, long option, DateTime now)
         {
-            TransactionId = guid;
+            Id = guid;
             Amount = option;
             TransactionDate = now;
             TopUpBeneficiary = beneficiary;
-            TopUpBeneficiaryId = beneficiary.BeneficiaryId;
+            TopUpBeneficiaryId = beneficiary.Id;
         }  
         
         public Transaction()

@@ -29,17 +29,17 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
 
             long totalTopUpAmount = request.Beneficiaries.Sum(b => b.TopUpOption + 1);
 
-            var balance = RetrieveBalance(user.UserId, cancellationToken).Result.Value;
+            var balance = RetrieveBalance(user.Id, cancellationToken).Result.Value;
 
             if (balance < totalTopUpAmount || balance < 3000)
             {
                 return Errors.ExecuteTopUp.InsufficientBalance;
             }
 
-            await Debit(user.UserId, totalTopUpAmount, cancellationToken);
+            await Debit(user.Id, totalTopUpAmount, cancellationToken);
 
             request.Beneficiaries.ForEach(beneficiary => {
-                var currentBeneficiary = user?.Beneficiaries?.SingleOrDefault(b => b.BeneficiaryId == beneficiary.BeneficiaryId);
+                var currentBeneficiary = user?.Beneficiaries?.SingleOrDefault(b => b.Id == beneficiary.BeneficiaryId);
                 user.AddTransaction(currentBeneficiary, beneficiary.TopUpOption + 1);
             });           
             

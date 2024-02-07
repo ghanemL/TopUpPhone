@@ -29,7 +29,7 @@ namespace MobileTopup.Application.Topups.Queries.GetTopUpBeneficiaries
                 var beneficiaries = user.Beneficiaries
                     .Select(b => new TopUpBeneficiaryResponse
                     {
-                        BeneficiaryId = b.BeneficiaryId,
+                        BeneficiaryId = b.Id,
                         Nickname = b.Nickname
                     })
                     .ToList();

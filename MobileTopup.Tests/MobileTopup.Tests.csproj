@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PreserveCompilationContext>false</PreserveCompilationContext>
+  </PropertyGroup>
+  <Target Name="CopyDepsJsonFiles" AfterTargets="Publish">
+            <ItemGroup>
+              <DepsJsonFiles Include="$(TargetDir)*.deps.json" />
+            </ItemGroup>
+            <Copy SourceFiles="@(DepsJsonFiles)" DestinationFolder="$(PublishDir)" />
+        </Target>
+		
+  
+   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="Shouldly" Version="4.1.0" />
+    <PackageReference Include="Respawn" Version="6.0.0" />
+	<PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="FakeItEasy" Version="7.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
+  </ItemGroup>
+  
+   <ItemGroup>
+     <ProjectReference Include="..\MobileTopup.Api\MobileTopup.Api.csproj" />
+     <ProjectReference Include="..\MobileTopup.Infrastructure\MobileTopup.Infrastructure.csproj" />
+   </ItemGroup>
+  
+
+</Project>

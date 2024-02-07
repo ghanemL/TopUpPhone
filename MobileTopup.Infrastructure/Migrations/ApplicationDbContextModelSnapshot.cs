@@ -24,7 +24,7 @@ namespace MobileTopup.Infrastructure.Migrations
 
             modelBuilder.Entity("MobileTopup.Domain.UserAggregate.Entities.TopUpBeneficiary", b =>
                 {
-                    b.Property<Guid>("BeneficiaryId")
+                    b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Nickname")
@@ -33,7 +33,7 @@ namespace MobileTopup.Infrastructure.Migrations
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("BeneficiaryId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -42,7 +42,7 @@ namespace MobileTopup.Infrastructure.Migrations
 
             modelBuilder.Entity("MobileTopup.Domain.UserAggregate.Entities.Transaction", b =>
                 {
-                    b.Property<Guid>("TransactionId")
+                    b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<long>("Amount")
@@ -54,7 +54,7 @@ namespace MobileTopup.Infrastructure.Migrations
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("TransactionId");
+                    b.HasKey("Id");
 
                     b.HasIndex("TopUpBeneficiaryId");
 
@@ -63,14 +63,17 @@ namespace MobileTopup.Infrastructure.Migrations
 
             modelBuilder.Entity("MobileTopup.Domain.UserAggregate.User", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });

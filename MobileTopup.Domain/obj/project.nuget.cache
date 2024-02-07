@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oVnTZhX2v7Vnzw1YysD88nc6y5fa80OGxyJeAlXBIRg/wAakTdq2aU0BKaH/AW85gUr31cxC8714aZykFY4YgA==",
+  "success": true,
+  "projectFilePath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ZP4125\\.nuget\\packages\\erroror\\1.0.0\\erroror.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

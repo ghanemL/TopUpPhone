@@ -8,8 +8,8 @@ namespace MobileTopup.Infrastructure.Persistance.Configuration
     {
         public void Configure(EntityTypeBuilder<Transaction> builder)
         {
-            builder.HasKey(b => b.TransactionId);
-            builder.Property(p => p.TransactionId).IsRequired().ValueGeneratedNever();
+            builder.HasKey(b => b.Id);
+            builder.Property(p => p.Id).IsRequired().ValueGeneratedNever();
             //builder.HasOne(u => u.TopUpBeneficiary).WithMany().HasForeignKey(u => u.TopUpBeneficiaryId);
         }
     }

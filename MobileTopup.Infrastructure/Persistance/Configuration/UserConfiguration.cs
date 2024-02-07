@@ -8,7 +8,7 @@ namespace MobileTopup.Infrastructure.Persistance.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(u => u.UserId);
+            builder.HasKey(u => u.Id);
             builder.HasMany(u => u.Beneficiaries).WithOne(u => u.User).HasForeignKey(u => u.UserId);
         }
     }

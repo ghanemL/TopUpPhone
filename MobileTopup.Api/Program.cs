@@ -22,15 +22,12 @@ var app = builder.Build();
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
-    // 3rd approach to error handling - error endpoint
-    app.UseExceptionHandler("/error"); // this is used in conjunction with the factory 
-
+    app.UseStaticFiles();
     app.UseHttpsRedirection();
-    //app.UseAuthentication();
-    //app.UseAuthorization();
     app.MapControllers();
 
     app.Run();
 }
+
+public partial class Program { }
 
