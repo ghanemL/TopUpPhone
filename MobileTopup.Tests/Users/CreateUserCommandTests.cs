@@ -4,14 +4,14 @@ using MobileTopup.IntegrationTests;
 using Xunit;
 using Shouldly;
 
-namespace MobileTopup.Tests.CreateUser
+namespace MobileTopup.Tests.Users
 {
     [Collection(nameof(SliceFixture))]
-    public class CreateTests
+    public class CreateUserCommandTests
     {
         private readonly SliceFixture _fixture;
 
-        public CreateTests(SliceFixture fixture) => _fixture = fixture;
+        public CreateUserCommandTests(SliceFixture fixture) => _fixture = fixture;
 
         [Fact]
         public async Task Should_create_user()
