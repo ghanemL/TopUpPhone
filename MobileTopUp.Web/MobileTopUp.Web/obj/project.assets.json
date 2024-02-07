@@ -2807,11 +2807,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopUp.Web\\MobileTopUp.Web\\MobileTopUp.Web.csproj",
+      "projectUniqueName": "C:\\Workspace\\TopUpPhone\\MobileTopUp.Web\\MobileTopUp.Web\\MobileTopUp.Web.csproj",
       "projectName": "MobileTopUp.Web",
-      "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopUp.Web\\MobileTopUp.Web\\MobileTopUp.Web.csproj",
+      "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopUp.Web\\MobileTopUp.Web\\MobileTopUp.Web.csproj",
       "packagesPath": "C:\\Users\\ZP4125\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopUp.Web\\MobileTopUp.Web\\obj\\",
+      "outputPath": "C:\\Workspace\\TopUpPhone\\MobileTopUp.Web\\MobileTopUp.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ZP4125\\AppData\\Roaming\\NuGet\\NuGet.Config",

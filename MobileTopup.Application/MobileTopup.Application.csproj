@@ -14,7 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MobileTopup.Contracts\MobileTopup.Contracts.csproj" />
     <ProjectReference Include="..\MobileTopup.Domain\MobileTopup.Domain.csproj" />
-    <ProjectReference Include="..\MobileTopUp.Web\MobileTopUp.Web\MobileTopUp.Web.csproj" />
+    <ProjectReference Include="..\MobileTopUp.Web\MobileTopUp.Web.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

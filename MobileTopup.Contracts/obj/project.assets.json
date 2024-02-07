@@ -58,11 +58,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
+      "projectUniqueName": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
       "projectName": "MobileTopup.Contracts",
-      "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
+      "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
       "packagesPath": "C:\\Users\\ZP4125\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\obj\\",
+      "outputPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ZP4125\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {
-              "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj"
+            "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {
+              "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj"
             }
           }
         }

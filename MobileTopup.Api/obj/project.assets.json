@@ -4376,8 +4376,8 @@
     },
     "MobileTopUp.Web/1.0.0": {
       "type": "project",
-      "path": "../MobileTopUp.Web/MobileTopUp.Web/MobileTopUp.Web.csproj",
-      "msbuildProject": "../MobileTopUp.Web/MobileTopUp.Web/MobileTopUp.Web.csproj"
+      "path": "../MobileTopUp.Web/MobileTopUp.Web.csproj",
+      "msbuildProject": "../MobileTopUp.Web/MobileTopUp.Web.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4398,11 +4398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Api\\MobileTopup.Api.csproj",
+      "projectUniqueName": "C:\\Workspace\\TopUpPhone\\MobileTopup.Api\\MobileTopup.Api.csproj",
       "projectName": "MobileTopup.Api",
-      "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Api\\MobileTopup.Api.csproj",
+      "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Api\\MobileTopup.Api.csproj",
       "packagesPath": "C:\\Users\\ZP4125\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Api\\obj\\",
+      "outputPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ZP4125\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4423,14 +4423,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Application\\MobileTopup.Application.csproj": {
-              "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Application\\MobileTopup.Application.csproj"
+            "C:\\Workspace\\TopUpPhone\\MobileTopup.Application\\MobileTopup.Application.csproj": {
+              "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Application\\MobileTopup.Application.csproj"
             },
-            "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj": {
-              "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj"
+            "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj": {
+              "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj"
             },
-            "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj": {
-              "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj"
+            "C:\\Workspace\\TopUpPhone\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj": {
+              "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj"
             }
           }
         }

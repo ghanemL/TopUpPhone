@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {}
+    "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {
+    "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj",
+        "projectUniqueName": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj",
         "projectName": "MobileTopup.Domain",
-        "projectPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\MobileTopup.Domain.csproj",
+        "projectPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\MobileTopup.Domain.csproj",
         "packagesPath": "C:\\Users\\ZP4125\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Domain\\obj\\",
+        "outputPath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ZP4125\\AppData\\Roaming\\NuGet\\NuGet.Config",

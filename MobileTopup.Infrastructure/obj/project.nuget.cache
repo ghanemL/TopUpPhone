@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KwXfOKsyRCN7gLy4dd8sFL6+T+++tW51Y/wgenqCuF3vQ31hQf3IehtmrApclwf6Uu7Y+qmXy82E8rZgIxjDxA==",
+  "dgSpecHash": "a94rbwkLN4F5+k+1Tzz4Xdm6/x88+0uJ9im+MXPq2ySaTCwM5tm+adP4m22ISZy5lu2xQa/DPCK/v5htVCuXnA==",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj",
+  "projectFilePath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Infrastructure\\MobileTopup.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZP4125\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ZP4125\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

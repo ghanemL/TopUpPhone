@@ -6,6 +6,7 @@ namespace MobileTopup.Domain.UserAggregate
     {      
         public Guid UserId { get; set; }
         public string? Name { get; set; }
+        public bool IsVerified { get; set; } = true;
         public List<TopUpBeneficiary>? Beneficiaries { get; set; } = new List<TopUpBeneficiary>();
 
         private User(string name)

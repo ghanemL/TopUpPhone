@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R1N+5k5adp7BFUS4aUInwjfkCzCigN9EaSU80QNHG+olbmW2negzLDDNZwi1XSv7e7MMt9erXj9BDgrLQyuWKA==",
+  "dgSpecHash": "dbOuTvVu+KhnznIN6XtJUriBFlLvHNGDuNdk2p18eQtKzfkphAGFA0z1BHKaJyVP/BViXR+oTjAg6oF0X/z7GA==",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\MobileTopUp\\MobileTopup\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
+  "projectFilePath": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts\\MobileTopup.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZP4125\\.nuget\\packages\\erroror\\1.0.0\\erroror.1.0.0.nupkg.sha512"
   ],
