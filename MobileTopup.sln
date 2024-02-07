@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopup.Api", "MobileTopup.Api\MobileTopup.Api.csproj", "{C9694682-F5F0-4E8E-ABCB-0C69A8B2E9CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopup.Application", "MobileTopup.Application\MobileTopup.Application.csproj", "{EC6A44FD-794B-4C2A-B539-1010519B4864}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopup.Contracts", "MobileTopup.Contracts\MobileTopup.Contracts.csproj", "{190AE435-4ABE-4188-8E7E-8DB7EA03B21E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopup.Domain", "MobileTopup.Domain\MobileTopup.Domain.csproj", "{AE567166-19F0-4BA6-A0C8-E6E09D1E7377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTopup.Infrastructure", "MobileTopup.Infrastructure\MobileTopup.Infrastructure.csproj", "{AF3A4077-AA41-4200-BE3C-52F46EA98432}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CD6C7E1-A508-4BED-BA7B-127E77A37E3D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTopUp.Web", "MobileTopUp.Web\MobileTopUp.Web\MobileTopUp.Web.csproj", "{E4CE0D20-4CD7-47DA-91B1-5466309D531A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9694682-F5F0-4E8E-ABCB-0C69A8B2E9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9694682-F5F0-4E8E-ABCB-0C69A8B2E9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9694682-F5F0-4E8E-ABCB-0C69A8B2E9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9694682-F5F0-4E8E-ABCB-0C69A8B2E9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6A44FD-794B-4C2A-B539-1010519B4864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6A44FD-794B-4C2A-B539-1010519B4864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6A44FD-794B-4C2A-B539-1010519B4864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6A44FD-794B-4C2A-B539-1010519B4864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190AE435-4ABE-4188-8E7E-8DB7EA03B21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190AE435-4ABE-4188-8E7E-8DB7EA03B21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190AE435-4ABE-4188-8E7E-8DB7EA03B21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190AE435-4ABE-4188-8E7E-8DB7EA03B21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE567166-19F0-4BA6-A0C8-E6E09D1E7377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE567166-19F0-4BA6-A0C8-E6E09D1E7377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE567166-19F0-4BA6-A0C8-E6E09D1E7377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE567166-19F0-4BA6-A0C8-E6E09D1E7377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3A4077-AA41-4200-BE3C-52F46EA98432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3A4077-AA41-4200-BE3C-52F46EA98432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3A4077-AA41-4200-BE3C-52F46EA98432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3A4077-AA41-4200-BE3C-52F46EA98432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CE0D20-4CD7-47DA-91B1-5466309D531A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FB8228A-01D2-4C90-930E-606237EA3C55}
+	EndGlobalSection
+EndGlobal

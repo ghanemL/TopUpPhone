@@ -1,0 +1,15 @@
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\bin\Debug\net6.0\MobileTopup.Contracts.deps.json
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\bin\Debug\net6.0\MobileTopup.Contracts.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\bin\Debug\net6.0\MobileTopup.Contracts.pdb
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.csproj.AssemblyReference.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.AssemblyInfoInputs.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.AssemblyInfo.cs
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.csproj.CoreCompileInputs.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\refint\MobileTopup.Contracts.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.pdb
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\ref\MobileTopup.Contracts.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\bin\Debug\net6.0\MobileTopup.Domain.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\bin\Debug\net6.0\MobileTopup.Domain.pdb
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopup.Contracts\obj\Debug\net6.0\MobileTopup.Contracts.csproj.CopyComplete

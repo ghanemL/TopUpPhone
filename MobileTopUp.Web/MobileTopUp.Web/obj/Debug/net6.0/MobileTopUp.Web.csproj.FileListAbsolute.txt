@@ -1,0 +1,12 @@
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\bin\Debug\net6.0\MobileTopUp.Web.deps.json
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\bin\Debug\net6.0\MobileTopUp.Web.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\bin\Debug\net6.0\MobileTopUp.Web.pdb
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.csproj.AssemblyReference.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.AssemblyInfoInputs.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.AssemblyInfo.cs
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.csproj.CoreCompileInputs.cache
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\refint\MobileTopUp.Web.dll
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\MobileTopUp.Web.pdb
+C:\Workspace\MobileTopUp\MobileTopup\MobileTopUp.Web\MobileTopUp.Web\obj\Debug\net6.0\ref\MobileTopUp.Web.dll

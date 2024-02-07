@@ -1,0 +1,31 @@
+﻿
+namespace MobileTopup.Domain.UserAggregate.Entities
+{
+    public class Transaction
+    {
+        public Guid TransactionId { get; set; }
+        public long Amount { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public TopUpBeneficiary? TopUpBeneficiary { get; set; }
+        public Guid? TopUpBeneficiaryId { get; set; }
+
+        public Transaction(Guid guid, TopUpBeneficiary beneficiary, long option, DateTime now)
+        {
+            TransactionId = guid;
+            Amount = option;
+            TransactionDate = now;
+            TopUpBeneficiary = beneficiary;
+            TopUpBeneficiaryId = beneficiary.BeneficiaryId;
+        }  
+        
+        public Transaction()
+        {
+
+        }
+
+        public static Transaction Create(TopUpBeneficiary beneficiary, long option)
+        {
+            return new Transaction(Guid.NewGuid(), beneficiary, option, DateTime.Now);
+        }
+    }
+}

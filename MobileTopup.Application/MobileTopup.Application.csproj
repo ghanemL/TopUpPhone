@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+   <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="1.0.0" />
+    <PackageReference Include="FluentResults" Version="3.11.0" />
+    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="OneOf" Version="3.0.223" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobileTopup.Contracts\MobileTopup.Contracts.csproj" />
+    <ProjectReference Include="..\MobileTopup.Domain\MobileTopup.Domain.csproj" />
+    <ProjectReference Include="..\MobileTopUp.Web\MobileTopUp.Web\MobileTopUp.Web.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
