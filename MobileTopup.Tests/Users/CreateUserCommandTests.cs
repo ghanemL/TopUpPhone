@@ -25,5 +25,18 @@ namespace MobileTopup.Tests.Users
             result.ShouldNotBeNull();
             result.Name.ShouldBe(cmd.Name);
         }
+
+        [Fact]
+        public async Task Should_not_create_duplicate_user()
+        {
+            var existingUser = User.Create("ExistingUser");
+            await _fixture.InsertAsync(existingUser);
+
+            var cmd = new CreateUserCommand(existingUser.Name);
+
+            var result = await _fixture.SendAsync(cmd);
+
+            result.Errors.First().Code.ShouldBe(Domain.Common.Errors.Errors.User.UserAlreadyExist.Code);
+        }
     }
 }
