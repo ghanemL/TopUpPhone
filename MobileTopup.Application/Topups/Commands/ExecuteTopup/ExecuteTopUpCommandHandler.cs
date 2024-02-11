@@ -62,7 +62,7 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
             return user;
         }
 
-        private async Task<ErrorOr<long>> RetrieveBalance(Guid userId, CancellationToken cancellationToken)
+        public async Task<ErrorOr<long>> RetrieveBalance(Guid userId, CancellationToken cancellationToken)
         {
             var response = await _balanceHttpService.GetBalanceAsync(userId.ToString(), cancellationToken);
             return long.TryParse(response, out long balance) ? balance : Errors.ExecuteTopUp.BalanceServiceUnavailable;
