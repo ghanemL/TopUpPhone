@@ -28,7 +28,8 @@ namespace MobileTopup.Api.Common.Mapping
             .Map(dest => dest.Transactions, src => src.Transactions);
 
             config.NewConfig<Transaction, TransactionResponse>()
-            .Map(dest => dest.Id, src => src.Id);
+            .Map(dest => dest.Id, src => src.Id)
+            .Map(dest => dest.TopUpOption, src => src.Amount);
 
 
 

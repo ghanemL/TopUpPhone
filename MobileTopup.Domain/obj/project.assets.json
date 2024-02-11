@@ -57,9 +57,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "http://artifactory.trading.gdfsuez.net/artifactory/api/nuget/GST": {},
         "http://artifactory.trading.gdfsuez.net/artifactory/api/nuget/nuget-global": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.telerik.com/v3/index.json": {},
-        "https://www.nuget.org": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

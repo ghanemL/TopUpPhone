@@ -5,10 +5,10 @@ using MobileTopUp.Web.ExternalHttpClient;
 
 namespace MobileTopUp.Web.Authentification
 {
-    public class TokenHttpClientService : HttpClientService
+    public class TokenHttpClientService : BalanceHttpClientService
     {
-        public TokenHttpClientService(HttpClient httpClient, ILogger<TokenHttpClientService> logger, IJsonConverter jsonConverter)
-            : base(httpClient, logger, jsonConverter)
+        public TokenHttpClientService(HttpClient httpClient, IJsonConverter jsonConverter)
+            : base(httpClient, jsonConverter)
         {
         }
     }

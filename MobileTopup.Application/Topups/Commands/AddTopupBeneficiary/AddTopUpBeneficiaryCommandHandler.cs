@@ -4,6 +4,7 @@ using MediatR;
 using MobileTopup.Application.Common.Interfaces.Persistance;
 using MobileTopup.Domain.UserAggregate;
 using MobileTopup.Domain.Common.Errors;
+using MobileTopup.Domain.UserAggregate.Entities;
 
 namespace MobileTopup.Application.Topups.Commands.AddTopupBeneficiary
 {
@@ -35,7 +36,7 @@ namespace MobileTopup.Application.Topups.Commands.AddTopupBeneficiary
                 return Errors.User.BeneficiaryAlreadyExists;
             }
 
-            user.AddTopUpBeneficiary(request.Nickname);
+            user.AddTopUpBeneficiary(TopUpBeneficiary.Create(user, request.Nickname));
 
             await _userRepository.SaveChangesAsync();
 

@@ -201,7 +201,6 @@ C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.Generat
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.AssemblyInfoInputs.cache
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.AssemblyInfo.cs
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.csproj.CoreCompileInputs.cache
-C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\staticwebassets.development.json
@@ -212,3 +211,4 @@ C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\refint\MobileTopup.Api.
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.pdb
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.genruntimeconfig.cache
 C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\ref\MobileTopup.Api.dll
+C:\Workspace\TopUpPhone\MobileTopup.Api\obj\Debug\net6.0\MobileTopup.Api.MvcApplicationPartsAssemblyInfo.cs

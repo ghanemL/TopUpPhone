@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="NSubstitute" Version="5.1.0" />
+    <PackageReference Include="xunit" Version="2.6.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobileTopup.Application\MobileTopup.Application.csproj" />
+    <ProjectReference Include="..\MobileTopup.Domain\MobileTopup.Domain.csproj" />
+    <ProjectReference Include="..\MobileTopup.Infrastructure\MobileTopup.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

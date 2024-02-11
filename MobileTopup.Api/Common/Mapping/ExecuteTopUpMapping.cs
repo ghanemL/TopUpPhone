@@ -13,7 +13,8 @@ namespace MobileTopup.Api.Common.Mapping
             .Map(dest => dest.Beneficiaries, src => src.TopUpRequests);
 
             config.NewConfig<TopUpRequest, TopUpBeneficiaryCommand>()
-                .Map(dest => dest.BeneficiaryId, src => src.BeneficiaryId);
+                .Map(dest => dest.BeneficiaryId, src => src.BeneficiaryId)
+                .Map(dest => dest.TopUpOption, src => Convert.ToInt64(src.TopUpOption));
         }
     }
 }

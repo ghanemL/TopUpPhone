@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MobileTopup.Application.Common.Interfaces.Persistance;
 using MobileTopup.Domain.UserAggregate;
+using MobileTopup.Domain.UserAggregate.Entities;
 
 namespace MobileTopup.Infrastructure.Persistance.Repositories
 {
@@ -48,6 +49,12 @@ namespace MobileTopup.Infrastructure.Persistance.Repositories
         {
             await _context.SaveChangesAsync();
         }
+
+        public TopUpBeneficiary GetBeneficiary(Guid userId, Guid beneficiaryId)
+        {
+            return GetById(userId)?.Beneficiaries?.SingleOrDefault(b => b.Id == beneficiaryId);
+        }
+       
 
     }
 }

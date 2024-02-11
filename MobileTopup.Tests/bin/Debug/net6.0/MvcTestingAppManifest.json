@@ -1,8 +1,0 @@
-{
-  "MobileTopup.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopup.Api",
-  "MobileTopup.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopup.Application",
-  "MobileTopup.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopup.Contracts",
-  "MobileTopup.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopup.Domain",
-  "MobileTopup.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopup.Infrastructure",
-  "MobileTopUp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Workspace\\TopUpPhone\\MobileTopUp.Web"
-}
