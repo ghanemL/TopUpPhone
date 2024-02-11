@@ -88,9 +88,9 @@ namespace MobileTopup.Api.Controllers
 
             var result = await _mediator.Send(query);
 
-            return result.IsFailed
-                ? Problem()
-                : Ok(result.Value);
+            return result.Match(
+                beneficiaries => Ok(_mapper.Map<List<TopUpBeneficiaryResponse>>(beneficiaries)),
+                errors => Problem(errors));
         }
 
         [HttpGet("getAvailableTopUpOptions")]

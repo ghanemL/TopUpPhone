@@ -1,12 +1,12 @@
 ﻿
-using FluentResults;
+using ErrorOr;
 using MediatR;
 using MobileTopup.Application.Common.Interfaces.Persistance;
 using MobileTopup.Contracts.Responses;
 
 namespace MobileTopup.Application.Topups.Queries.GetTopUpBeneficiaries
 {
-    public class GetTopUpBeneficiariesQueryHandler : IRequestHandler<GetTopUpBeneficiariesQuery, Result<List<TopUpBeneficiaryResponse>>>
+    public class GetTopUpBeneficiariesQueryHandler : IRequestHandler<GetTopUpBeneficiariesQuery, ErrorOr<List<TopUpBeneficiaryResponse>>>
     {
         private readonly IUserRepository _userRepository;
 
@@ -15,7 +15,7 @@ namespace MobileTopup.Application.Topups.Queries.GetTopUpBeneficiaries
             _userRepository = userRepository;
         }
 
-        public async Task<Result<List<TopUpBeneficiaryResponse>>> Handle(GetTopUpBeneficiariesQuery request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<List<TopUpBeneficiaryResponse>>> Handle(GetTopUpBeneficiariesQuery request, CancellationToken cancellationToken)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace MobileTopup.Application.Topups.Queries.GetTopUpBeneficiaries
 
                 if (user == null)
                 {
-                    return Result.Fail("User not found.");
+                    return ErrorOr.Error.NotFound("User not found.");
                 }
 
                 var beneficiaries = user.Beneficiaries
@@ -34,11 +34,11 @@ namespace MobileTopup.Application.Topups.Queries.GetTopUpBeneficiaries
                     })
                     .ToList();
 
-                return Result.Ok(beneficiaries);
+                return beneficiaries;
             }
             catch (Exception ex)
             {
-                return Result.Fail("An error occurred while processing the request.");
+                return ErrorOr.Error.Failure("An error occurred while processing the request.");
             }
         }
     }
