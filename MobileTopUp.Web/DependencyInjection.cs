@@ -11,7 +11,7 @@ namespace MobileTopUp.Web
         public static IServiceCollection AddWeb(this IServiceCollection services)
         {
 
-            services.AddHttpClient<BalanceHttpClientService>((provider, c) =>
+            services.AddHttpClient<IBalanceHttpClientService>((provider, c) =>
             {
                 c.Timeout = TimeSpan.FromMinutes(10);
                 c.BaseAddress = new Uri("https://localhost:7076");
@@ -19,6 +19,7 @@ namespace MobileTopUp.Web
 
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IJsonConverter, JsonConverter>();
+            services.AddScoped<IBalanceHttpClientService, BalanceHttpClientService>();
             return services;
         }
     }

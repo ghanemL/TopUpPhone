@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MobileTopUp.Web.ExternalHttpClient
 {
-    public class BalanceHttpClientService 
+    public class BalanceHttpClientService  : IBalanceHttpClientService
     {
         private HttpClient _httpClient;
         private readonly IJsonConverter _jsonConverter;

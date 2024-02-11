@@ -11,11 +11,11 @@ namespace MobileTopup.Application.Topups.Commands.ExecuteTopup
     public class ExecuteTopUpCommandHandler : IRequestHandler<ExecuteTopUpCommand, ErrorOr<User>>
     {
         private readonly IUserRepository _userRepository;
-        private readonly BalanceHttpClientService _balanceHttpService;
+        private readonly IBalanceHttpClientService _balanceHttpService;
 
 
-        public ExecuteTopUpCommandHandler(IUserRepository userRepository, 
-            BalanceHttpClientService balanceHttpService)
+        public ExecuteTopUpCommandHandler(IUserRepository userRepository,
+            IBalanceHttpClientService balanceHttpService)
         {
             _userRepository = userRepository;
             _balanceHttpService = balanceHttpService;
