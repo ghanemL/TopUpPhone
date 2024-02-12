@@ -77,7 +77,7 @@ namespace MobileTopup.Api.IntegrationTests.Common
 
         public async Task<HttpResponseMessage> AddBeneficiaryAsync(AddTopUpBeneficiaryRequest addBeneficiaryRequest)
         {
-            return await _httpClient.PostAsJsonAsync($"api/TopUp/addBeneficiary", addBeneficiaryRequest).ConfigureAwait(false); ;
+            return await _httpClient.PostAsJsonAsync($"api/TopUp/addBeneficiary", addBeneficiaryRequest).ConfigureAwait(false);
         }
 
         public async Task<List<TopUpBeneficiaryResponse>> GetBeneficiariesAndExpectSuccessAsync(GetTopUpBeneficiariesQuery getBeneficiariesRequest)

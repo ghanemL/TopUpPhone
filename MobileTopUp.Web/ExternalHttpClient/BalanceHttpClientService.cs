@@ -1,5 +1,6 @@
 ﻿using IdentityModel.Client;
 using MobileTopUp.Web.Converter;
+using System.Net.Http.Json;
 using System.Text;
 
 namespace MobileTopUp.Web.ExternalHttpClient
@@ -26,9 +27,8 @@ namespace MobileTopUp.Web.ExternalHttpClient
 
         public async Task<bool>  DebitAsync(string userId, long amount, CancellationToken cancellationToken)
         {
-            var message = await CreatePostRequestAsync(new Uri("https://localhost:7076/executeDebit"), string.Format(userId, amount), cancellationToken);
-            var result = await SendAndDeserializeJsonAsync<bool>(message, cancellationToken);
-            return result;
+            var message =  await _httpClient.PostAsJsonAsync($"https://localhost:7076/executeDebit", userId).ConfigureAwait(false);
+            return message.IsSuccessStatusCode;
         }
 
         public async Task<T> SendAndDeserializeJsonAsync<T>(HttpRequestMessage message, CancellationToken cancellationToken)
@@ -52,12 +52,13 @@ namespace MobileTopUp.Web.ExternalHttpClient
             return await _httpClient.RequestTokenAsync(tokenRequest, cancellationToken);
         }
 
-        private async Task<HttpRequestMessage> CreatePostRequestAsync(Uri method, string content, CancellationToken cancellationToken)
+        private async Task<HttpRequestMessage> CreatePostRequestAsync(Uri method, CancellationToken cancellationToken)
         {
             var message = new HttpRequestMessage(HttpMethod.Post, method)
             {
-                Content = new StringContent(content, Encoding.UTF8, "application/x-www-form-urlencoded")
+                Content = new StringContent(string.Empty, Encoding.UTF32, "application/json")
             };
+
             //message.Headers.Authorization = new AuthenticationHeaderValue("Bearer", await GetTokenAsync("scope", cancellationToken));
             return message;
         }

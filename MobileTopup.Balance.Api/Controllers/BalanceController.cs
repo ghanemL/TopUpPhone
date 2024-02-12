@@ -15,10 +15,10 @@ namespace MobileTopup.Balance.Api.Controllers
         }
 
         [HttpPost("executeDebit")]
-        public async Task<IActionResult> ExecuteDebit([FromBody] Guid userId, long amount)
+        public async Task<IActionResult> ExecuteDebit(Guid userId, long amount)
         {
 
-            return Ok(true);
+            return Ok();
         }
     }
 }
