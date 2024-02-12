@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MobileTopup.TestCommon\MobileTopup.TestCommon.csproj" />
+    <ProjectReference Include="..\MobileTopup.Domain\MobileTopup.Domain.csproj" />
   </ItemGroup>
 
 </Project>
